@@ -1,0 +1,35 @@
+Task:Image will start a web service in port 80. Use -p flag to access the contents with your browser. Submit your used commands for this exercise.
+
+
+First I checked with "netstat -antu |grep 6000", whether my choice for nice port would be free. Then ran docker run. Then curled host port to get the answer from container port. Finished with docker inspect to see how the port bindings are shown there. Except, my "isGoodPort" investigation was not conclusive. Browser did not manage to see localhost:6000 even if curl did. So did the same with localhost:6123 and also got the browser response expected.
+
+Command to run container with ports configured to bind host port 6000 to port 80 of the container:
+
+p@nixos~/g/docker-devops> docker run -d -p 6000:80 devopsdockeruh/ports_exercise
+Unable to find image 'devopsdockeruh/ports_exercise:latest' locally
+latest: Pulling from devopsdockeruh/ports_exercise
+cd784148e348: Pull complete 
+9abca35fefbf: Pull complete 
+7fc670963d22: Pull complete 
+893040f9bc16: Pull complete 
+b0ae6401e570: Pull complete 
+Digest: sha256:2ff93dd0c744aee7a8f00bc9558d09fd6279493da0d01769fe600f78fb4593f2
+Status: Downloaded newer image for devopsdockeruh/ports_exercise:latest
+4af166f627bc70d1804d5c2c16e3f067571a7317c26e9a0fac8240462161d65f
+p@nixos~/g/docker-devops> curl localhost:80
+curl: (7) Failed to connect to localhost port 80: Connection refused
+p@nixos~/g/docker-devops> curl localhost:6000
+Ports configured correctly!!⏎                                                                                                                  p@nixos~/g/docker-devops> man docker-inspect
+p@nixos~/g/docker-devops> docker container ls --last 1
+CONTAINER ID        IMAGE                           COMMAND             CREATED             STATUS              PORTS                  NAMES
+4af166f627bc        devopsdockeruh/ports_exercise   "npm start"         2 minutes ago       Up 2 minutes        0.0.0.0:6000->80/tcp   compassionate_wilson
+p@nixos~/g/docker-devops> docker inspect 4af1
+-- irrelevant part omitted.
+            "PortBindings": {
+                "80/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "6000"
+                    }
+                ]
+            },

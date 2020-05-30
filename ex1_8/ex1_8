@@ -1,6 +1,8 @@
+Task: In this exercise we won’t create a new Dockerfile. Image devopsdockeruh/first_volume_exercise has instructions to create a log into /usr/app/logs.txt. Start the container with bind mount so that the logs are created into your filesystem. Submit your used commands for this exercise.
+
 Command that worked:
 
-[petsa@petteri-nixos :~/code/docker/ex1_8] λ:  docker run -it -v $(pwd)/logs.txt:/usr/app/logs.txt devopsdockeruh/first_volume_exercise
+[p@nixos :~/code/docker/ex1_8] λ:  docker run -it -v $(pwd)/logs.txt:/usr/app/logs.txt devopsdockeruh/first_volume_exercise
 (node:1) ExperimentalWarning: The fs.promises API is experimental
 Wrote to file /usr/app/logs.txt
 Wrote to file /usr/app/logs.txt
@@ -9,7 +11,7 @@ Wrote to file /usr/app/logs.txt
 First try resulted in an error message. It expected logs.txt to be a directory instead of a file. Fix: touch logs.txt . Then when running the command again it worked fine.
 
 And the secret:
-petsa@petteri-nixos~/c/d/ex1_8> tail -f logs.txt
+p@nixos~/c/d/ex1_8> tail -f logs.txt
 Thu, 28 May 2020 16:04:12 GMT
 Thu, 28 May 2020 16:04:15 GMT
 Thu, 28 May 2020 16:04:18 GMT
