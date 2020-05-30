@@ -1,0 +1,13 @@
+Output of "docker ps":
+
+Script started on 2020-05-26 18:30:25+03:00 [TERM="rxvt-unicode-256color" TTY="/dev/pts/0" COLUMNS="143" LINES="41"]
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                       PORTS                   NAMES
+43143eedeba8        nginx               "nginx -g 'daemon of…"   3 minutes ago       Exited (0) 2 minutes ago                             nice_lamarr
+2398c5e2c82a        nginx               "nginx -g 'daemon of…"   3 minutes ago       Exited (0) 2 minutes ago                             suspicious_leavitt
+89f89ef2dd29        nginx               "nginx -g 'daemon of…"   3 minutes ago       Up 3 minutes                 80/tcp                  zen_chatterjee
+8d25feb9a779        ubuntu              "bash"                   54 minutes ago      Exited (0) 15 minutes ago                            brave_dhawan
+11fb150ced22        ubuntu              "bash"                   57 minutes ago      Exited (0) 54 minutes ago                            boring_diffie
+d9b7fc518a18        skype               "/usr/sbin/sshd -D"      11 months ago       Created                                              sharp_cori
+82764e358bc2        skype               "/usr/sbin/sshd -D"      11 months ago       Exited (255) 11 months ago   0.0.0.0:55555->22/tcp   peaceful_banzai
+
+Script done on 2020-05-26 18:30:25+03:00 [COMMAND_EXIT_CODE="0"]

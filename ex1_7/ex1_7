@@ -1,0 +1,29 @@
+Dockerfile:
+
+"
+  FROM ubuntu:16.04
+
+  WORKDIR /usr/app
+  COPY curl_stuff.sh /usr/app/
+  RUN apt-get update && apt-get install -y curl
+  CMD ["sh","curl_stuff.sh"]
+"
+
+Command to run it:
+"docker run -it curler"
+
+Script file on this:
+
+Script started on 2020-05-27 23:55:21+03:00 [TERM="rxvt-unicode-256color" TTY="/dev/pts/0" COLUMNS="143" LINES="41"]
+Input website:
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
+
+Script done on 2020-05-27 23:55:29+03:00 [COMMAND_EXIT_CODE="0"]

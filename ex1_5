@@ -1,0 +1,8 @@
+Final solution: docker run -it --network=host --name ex1_5 ubuntu sh -c 'apt-get update && apt-get -y install curl;echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+
+
+Problem one:
+No network. Fixed that with flag "--network=host" so the container used the host's network settings.
+
+Problem two:
+"apt-get install curl" or "apt-get search curl" didn't work, and didn't remember how Ubuntu really works. Finally realized that you need the update command first for it to be able to find curl package. So just prepended the shell commmand with "apt-get update && apt-get -y install" I tried in a separate Ubuntu container and noticed you also need the "-y" so it does not ask questions.

@@ -1,0 +1,10 @@
+Outputs of "docker ps -a" and "docker images":
+
+Script started on 2020-05-26 18:38:31+03:00 [TERM="rxvt-unicode-256color" TTY="/dev/pts/0" COLUMNS="143" LINES="41"]
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES               SIZE
+
+Script done on 2020-05-26 18:38:32+03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2020-05-26 18:39:20+03:00 [TERM="rxvt-unicode-256color" TTY="/dev/pts/0" COLUMNS="143" LINES="41"]
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+Script done on 2020-05-26 18:39:20+03:00 [COMMAND_EXIT_CODE="0"]

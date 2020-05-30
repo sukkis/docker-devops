@@ -1,0 +1,26 @@
+First Dockerfile:
+"
+  FROM devopsdockeruh/overwrite_cmd_exercise
+
+  CMD [”/bin/bash"]
+"
+
+Improved Dockerfile:
+"
+  FROM devopsdockeruh/overwrite_cmd_exercise
+  COPY clock.sh /usr/app/
+  ENTRYPOINT ["sh", "/usr/app/clock.sh"]
+"
+
+The alternative clock code in improved Docker file (clock.sh):
+"
+  #!/bin/bash
+  while true; do TZ="Europe/Helsinki" date +%H:%M:%S; sleep 1; clear; done
+"
+Command to run container:
+"docker run -it docker-clock"
+
+ALTERNATIVE SOLUTIONS
+In the Dockerfile you can provide a CMD that has default arguments that would suit the original code. E.g. CMD ["-c","212322"]. This would havelead to situation where this number is incremented every second. But it would not really be a clock.
+
+You could combo the previous with copying an improved index.js on top of the original one. Like "COPY index.js /usr/app/", so that the individual function that is supposed to be a clock is fixed. 

@@ -1,0 +1,51 @@
+Start container:
+docker run -it --name ex1_4 devopsdockeruh/exec_bash_exercise
+
+updating log entries:
+tail -f ./log.txt
+
+move typescript back to host:
+docker cp ex1_4:/typescript ex1_4.txt
+
+Script started on Wed May 27 06:47:56 2020
+"Docker is easy"
+Wed, 27 May 2020 06:47:35 GMT
+Wed, 27 May 2020 06:47:38 GMT
+Wed, 27 May 2020 06:47:41 GMT
+Wed, 27 May 2020 06:47:44 GMT
+Secret message is:
+"Docker is easy"
+Wed, 27 May 2020 06:47:50 GMT
+Wed, 27 May 2020 06:47:53 GMT
+Wed, 27 May 2020 06:47:56 GMT
+Wed, 27 May 2020 06:47:59 GMT
+Secret message is:
+"Docker is easy"
+Wed, 27 May 2020 06:48:05 GMT
+Wed, 27 May 2020 06:48:08 GMT
+Wed, 27 May 2020 06:48:11 GMT
+Wed, 27 May 2020 06:48:14 GMT
+Secret message is:
+"Docker is easy"
+Wed, 27 May 2020 06:48:20 GMT
+Wed, 27 May 2020 06:48:23 GMT
+Wed, 27 May 2020 06:48:26 GMT
+Wed, 27 May 2020 06:48:29 GMT
+Secret message is:
+"Docker is easy"
+Wed, 27 May 2020 06:48:35 GMT
+Wed, 27 May 2020 06:48:38 GMT
+Wed, 27 May 2020 06:48:41 GMT
+Wed, 27 May 2020 06:48:44 GMT
+Secret message is:
+"Docker is easy"
+Wed, 27 May 2020 06:48:50 GMT
+Wed, 27 May 2020 06:48:53 GMT
+Wed, 27 May 2020 06:48:56 GMT
+Wed, 27 May 2020 06:48:59 GMT
+Secret message is:
+"Docker is easy"
+Wed, 27 May 2020 06:49:05 GMT
+Wed, 27 May 2020 06:49:08 GMT
+^C
+Script done on Wed May 27 06:49:10 2020
