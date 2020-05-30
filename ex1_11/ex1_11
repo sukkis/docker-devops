@@ -1,0 +1,7 @@
+Task: Create dockerfile for backend. Run it so that volume for logs persists.
+
+p@nixos~/g/backend-example-docker> docker volume create vol_ex1_11
+p@nixos~/g/backend-example-docker> docker build -t backend-example .
+p@nixos~/g/backend-example-docker> docker run -it -p 8000:8000 -v vol_ex1_11:/logs.txt backend-example .
+p@nixos~/g/backend-example-docker> curl localhost:8000
+Port configured correctly, generated message in logs.txt⏎                                                                                      
