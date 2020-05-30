@@ -1,4 +1,4 @@
-Find the password - search "devopsdockeruh/pull_exercise" in dockerhub and read.
+Find the password - search in dockerhub and read.
 
 p@nixos~/c/d/> docker run -it devopsdockeruh/pull_exercise
 Unable to find image 'devopsdockeruh/pull_exercise:latest' locally
