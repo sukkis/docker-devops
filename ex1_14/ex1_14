@@ -1,0 +1,6 @@
+The "Dockerfile_first" contains my first iteration, just starting in dev mode.
+
+"Dockerfile" and "start.sh" describe my second iteration, to run either dev or production mode, managing the secret key as well.
+
+To start in production mode:
+docker run -it -p 3000:3000 rails-example -p
